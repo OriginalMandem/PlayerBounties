@@ -1,0 +1,15 @@
+name: PlayerBounties
+version: 1.0
+main: io.github.originalalex.Plugin
+depend: [Vault]
+
+commands:
+  bounty:
+    description: Bounties plugin
+
+permissions:
+  bounty.bounty:
+    default: true
+    description: Place bounties on other players
+  bounty.remove:
+    description: Remove a bounty from a player

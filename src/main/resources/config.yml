@@ -1,0 +1,44 @@
+# Placeholders:
+# %amount% = The amount of money a bounty is worth
+# %killer% = The player who claims the bounty
+# %player% = The player on whom the bounty is placed
+# Leave a message blank to not display it.
+
+Database:
+  host: 'localhost'
+  port: 3306
+  user: 'root'
+  pass: ''
+
+Gui:
+  title: 'Bounty Hunter Contracts'
+
+minbounty: 0
+maxbounty: 1000
+
+help_message: |-
+  &b&n&3&lBounty Hunter Commands
+
+
+  &r/bounty list
+  &7View currently online players with bounties
+
+
+  &r/bounty add <player> <amount>
+  &7Put a bounty on a player
+
+
+  &r/bounty get <player>
+  &7Display the bounty of a specific player
+
+collect_bounty_message: '&l&a+ $%amount%'
+
+bounty_collection_announcement_message: '&b%killer% &7claimed a bounty of &b$$%amount% on player %player%'
+
+bounty_collect_message: '&a%killer% received a bounty of $%amount% for killing %player%'
+
+bounty_increase_message: '&aYou have successfully increased the value on %player% to $%amount%'
+
+bounty_place_message: '&aYou have successfully placed a bounty of $%amount% on %player%'
+
+bounty_display_message: '&aPlayer %player% has an active bounty of $%amount%'
