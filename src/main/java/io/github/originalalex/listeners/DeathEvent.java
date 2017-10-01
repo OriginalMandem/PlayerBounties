@@ -34,6 +34,9 @@ public class DeathEvent implements Listener {
             Player killer = dead.getKiller();
             double reward = bounty.getReward(dead.getUniqueId());
             economy.depositPlayer(killer, reward);
+            String privateReward = config.getString("collect_bounty_message");
+            privateReward = privateReward.replaceAll("%amount%", String.valueOf(reward));
+            killer.sendMessage(ChatColor.translateAlternateColorCodes('&', privateReward));
             String rewardReceivedMessage = config.getString("bounty_collect_message");
             rewardReceivedMessage = ChatColor.translateAlternateColorCodes('&', rewardReceivedMessage);
             rewardReceivedMessage = rewardReceivedMessage.replaceAll("%killer%", killer.getName()).replace("%player%", dead.getName()).replaceAll("%amount%", String.valueOf(reward));
